@@ -1,0 +1,9 @@
+#! /bin/sh
+
+if [ $# -ne 2 ] || [ "$1" != "--prefix" ]; then
+    echo "usage: $0 --prefix PREFIX"
+    exit 2
+fi
+
+echo "BINDIR=$2/bin/" > Makefile.config
+
